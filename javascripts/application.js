@@ -54,11 +54,11 @@ function scrollElements() {
   // $(".danContainer").css("height", height * (1 + scrollTopVal / height) + "px");
 
   // $(".nameContainer").css("width", th + "px " + tw + "px");
-  if (scrollTopVal < 4000) {
+  if (scrollTopVal < 3500) {
     $("#brian").css("opacity", (scrollTopVal - 200) / 2000);
     $("#fullStack").css("opacity", (scrollTopVal - 1500) / 2000);
     $("#developer").css("opacity", (scrollTopVal - 1500) / 2000);
-  } else if (scrollTopVal >= 4000) {
+  } else if (scrollTopVal >= 3500) {
     $("#brian").css("opacity", 0);
     $("#fullStack").css("opacity", 0);
     $("#developer").css("opacity", 0);
@@ -102,7 +102,7 @@ function scrollElements() {
   //     .css("left", 2.2 * tw + "px");
   // }
 
-  if (scrollTopVal <= 3000) {
+  if (scrollTopVal <= 3500) {
     $(".triangle").css("border-width", th + "px " + tw + "px");
     $(".triangle-blue").css("opacity", 1);
     $(".triangle-red").css("opacity", 1);
@@ -384,7 +384,7 @@ function scrollElements() {
   //     .css("top", 18 * th + "px")
   //     .css("left", 2 * tw + "px");
   // }
-  else if (scrollTopVal > 4000) {
+  else if (scrollTopVal > 3000) {
     $("#skills").css("opacity", 1);
     $("#skills").css("opacity", 1);
     $(".triangle-blue")
