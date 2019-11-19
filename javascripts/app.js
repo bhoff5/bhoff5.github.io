@@ -977,24 +977,20 @@
 
     // Initialize views
     FlipbookView.getInstance();
-    PageSliderView.getInstance();
-    MiniaturesView.getInstance();
-    OptionsView.getInstance();
-    ZoomSliderView.getInstance();
-    ControlsView.getInstance();
-    TableContentsView.getInstance();
+    // PageSliderView.getInstance();
+    // MiniaturesView.getInstance();
+    // OptionsView.getInstance();
+    // ZoomSliderView.getInstance();
+    // ControlsView.getInstance();
+    // TableContentsView.getInstance();
 
-    $(window).on("orientationchange", function(event) {
-      $(window).scrollTop(0);
-      $(window).scrollLeft(0);
-    });
+    // $(window).on("orientationchange", function(event) {
+    //   $(window).scrollTop(0);
+    //   $(window).scrollLeft(0);
+    // });
 
     $(document).on("vmousemove", function(event) {
       event.preventDefault();
-    });
-
-    $(window).load(function() {
-      $(window).scrollTop(0);
     });
   }
 
