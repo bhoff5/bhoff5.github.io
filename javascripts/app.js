@@ -992,10 +992,6 @@
     $(document).on("vmousemove", function(event) {
       event.preventDefault();
     });
-
-    $(window).load(function() {
-      $(window).scrollTop(0);
-    });
   }
 
   $(document).ready(bootstrap);

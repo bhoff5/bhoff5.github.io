@@ -33,13 +33,13 @@
     <!-- <link rel="icon" type="image/png" href="assets/img/favicon.png?a" /> -->
 
     <!-- App CSS dependencies -->
-    <!-- <link type="text/css" rel="stylesheet" href="stylesheets/main.css" /> -->
+    <link type="text/css" rel="stylesheet" href="stylesheets/main.css" />
   </head>
   <body>
     <div class="container">
       <div id="catalog" class="catalog-app">
         <div id="viewer">
-          <div id="flipbook" class="ui-flipbook">
+          <div id="flipbook" class="ui-flipbook animation-on">
             <div style="background-color:#0f0f0f;"></div>
 
             <div>
@@ -372,15 +372,13 @@
           width: 1280,
           height: 920,
           duration: 1500,
-          elevation: 5,
-          page: 2,
-          zoom: false
+          page: 9
         }
       };
 
-      $(window).load(function(event) {
-        $("#flipbook").addClass("animation-on");
-      });
+      // $(window).load(function(event) {
+      //   $("#flipbook").addClass("animation-on");
+      // });
     </script>
   </body>
 </html>
