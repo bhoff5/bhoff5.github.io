@@ -272,8 +272,10 @@ function scrollElements() {
       .css("top", 10 * th + "px")
       .css("left", 3 * tw + "px");
     $("#catalog").css("opacity", 0);
+    $(".backgrounds").css("pointer-events", "none");
   } else if (scrollTopVal > 3000) {
     console.log(h);
+    $(".backgrounds").css("pointer-events", "none");
     $("#catalog").css("opacity", 1);
     // $("#skills").css("z-index", 9999);
     $(".triangle-blue")
