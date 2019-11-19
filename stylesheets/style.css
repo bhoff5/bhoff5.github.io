@@ -10,6 +10,11 @@ html {
   scroll-behavior: smooth;
 }
 
+li {
+  padding: 0;
+  height: 6vh;
+}
+
 @font-face {
   font-family: "tex_gyre_scholaregular";
   src: url("texgyreschola-regular-webfont.woff") format("woff");
@@ -247,6 +252,7 @@ h2 {
 .bio {
   column-count: 2;
   text-align: justify;
+  height: 100%;
 }
 
 :focus {
@@ -259,35 +265,8 @@ h2 {
   margin: 10px 0;
 }
 
-.page {
-  /* opacity: 0;
-  color: #2e2e2a;
-  font-family: "tex_gyre_scholaregular", serif;
-  height: 600px;
-  width: 500px;
-  top: 50%;
-  left: 50%;
-  margin-top: -300px;
-  margin-left: -250px;
-  background: #fceed2ff;
-  z-index: -1000;
-  position: fixed;
-  box-shadow: inset 0px 0px 30px 5px rgba(5, 5, 5, 0.3);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -moz-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); */
-}
-
-.page hr {
-  /* height: 1px;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.678);
-  margin-bottom: 50px; */
-}
-
 .thumbnail {
-  width: 300px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
@@ -300,11 +279,12 @@ h2 {
 } */
 
 .pageText {
-  font-size: 3vh;
+  background-color: #fceed2;
+  font-size: 2.5vh;
   font-family: "tex_gyre_scholaregular", serif;
-  padding: 15vh 10vh;
+  padding: 13vh 9vh;
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
   box-shadow: inset 0 0 13px 4px #00000014;
 }
 
@@ -317,6 +297,14 @@ ul {
 ul span {
   width: 100%;
   display: inline-block;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+svg {
+  margin-bottom: 1vh;
 }
 
 .downCenter {

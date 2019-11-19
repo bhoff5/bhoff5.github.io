@@ -804,7 +804,7 @@ html:full-screen #controls #ui-icon-full-screen .fa:before {
   left: 0px;
   opacity: 1;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 400px) {
   .ui-share-box .ui-share-options {
     font-size: 30px !important;
   }
