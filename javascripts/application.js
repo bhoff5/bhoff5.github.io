@@ -89,15 +89,15 @@ function scrollElements() {
   if (w <= 1000) {
     $(".myName").css("font-size", tw / 6 + "px");
     $("#brian")
-      .css("top", 4.8 * th + "px")
+      .css("top", 4.0 * th + "px")
       .css("left", 0.8 * tw + "px");
 
     $("#fullStack")
-      .css("top", 9.3 * th + "px")
-      .css("left", 2.5 * tw + "px");
+      .css("top", 9.0 * th + "px")
+      .css("left", 2.8 * tw + "px");
 
     $("#developer")
-      .css("top", 15.5 * th + "px")
+      .css("top", 17 * th + "px")
       .css("left", 2.8 * tw + "px");
   } else if (w <= 2000) {
     $(".myName").css("font-size", tw / 9 + "px");
