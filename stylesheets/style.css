@@ -1,6 +1,6 @@
 .container {
   width: 84vw;
-  height: 500vh;
+  height: 4000px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -8,6 +8,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
 }
 
 li {
@@ -34,7 +38,7 @@ li {
 
 body {
   margin: 0;
-  height: 4000px;
+  height: 100%;
 }
 
 .backgrounds {
