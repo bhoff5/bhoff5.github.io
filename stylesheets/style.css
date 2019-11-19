@@ -6,14 +6,10 @@
   position: relative;
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
   overflow: scroll;
-}
-
-* {
-  -webkit-overflow-scrolling: touch;
-}
+} */
 
 li {
   padding: 0;
@@ -25,6 +21,10 @@ li {
   src: url("texgyreschola-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+#catalog {
+  opacity: 0;
 }
 
 .myName {
@@ -40,6 +40,8 @@ li {
 body {
   margin: 0;
   height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 
 .backgrounds {
@@ -48,7 +50,7 @@ body {
   left: 0px;
   width: 100%;
   height: 100vh;
-  /* pointer-events: none; */
+  pointer-events: none;
 }
 
 .covers {
@@ -59,7 +61,7 @@ body {
   width: 100%;
 }
 
-.danPortrait {
+.rightPortrait {
   position: absolute;
   width: 100%;
   margin-top: 5%;
@@ -70,7 +72,7 @@ body {
   overflow: hidden;
 }
 
-.johnPortrait {
+.leftPortrait {
   margin-left: 0%;
   position: absolute;
   margin-top: 5%;
@@ -91,7 +93,7 @@ body {
   position: fixed;
 }
 
-.danContainer {
+.rightContainer {
   /* margin-left: 100%; */
   /* margin-left: 100vw; */
   transform: translateX(500%);
@@ -105,7 +107,7 @@ body {
   -o-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); */
 }
 
-.johnContainer {
+.leftContainer {
   transform: translateX(-500%);
 
   /* margin-left: -100vw; */
@@ -271,9 +273,9 @@ h2 {
 }
 
 .thumbnail {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 50px;
 }
 
