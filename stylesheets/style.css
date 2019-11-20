@@ -26,7 +26,7 @@ li {
 }
 
 #catalog {
-  /* opacity: 0; */
+  opacity: 0;
   touch-action: none;
   /* display: none; */
 }
@@ -258,7 +258,7 @@ h2 {
 .bio {
   column-count: 2;
   text-align: justify;
-  height: 100%;
+  /* height: 100%; */
 }
 
 :focus {
@@ -285,8 +285,8 @@ h2 {
 } */
 
 .pageText {
-  background-color: #fceed2;
-  font-size: 2.5vh;
+  filter: grayscale();
+  font-size: 1.9vh;
   font-family: "tex_gyre_scholaregular", serif;
   padding: 13vh 9vh;
   height: 100%;

@@ -14,7 +14,7 @@ function scrollElements() {
     $(".backgrounds").css("top", 4 * th + "px");
   } else {
     th = h / 25;
-    tw = w / 4;
+    tw = w / 5;
     $(".backgrounds").css("top", 0);
   }
   var tmargin = (w - tw * 4) / 2;
@@ -87,7 +87,7 @@ function scrollElements() {
     .css("left", 2.8 * tw + "px");
 
   if (w <= 1000) {
-    $(".myName").css("font-size", tw / 6 + "px");
+    $(".myName").css("font-size", tw / 8 + "px");
     $("#brian")
       .css("top", 4.0 * th + "px")
       .css("left", 0.8 * tw + "px");
@@ -277,6 +277,8 @@ function scrollElements() {
     console.log(h);
     $(".backgrounds").css("pointer-events", "none");
     $("#catalog").css("display", "block");
+    $("#catalog").css("opacity", 1);
+
     // $("#skills").css("z-index", 9999);
     $(".triangle-blue")
       // .css("left", 0 * tw + "px")
@@ -287,6 +289,7 @@ function scrollElements() {
       .css("left", 3.5 * tw + "px")
       .css("opacity", 0)
       .css("border-width", th + "px " + tw / 2 + "px");
+
     $(".triangle-blue").css("top", h / 2.5 + "px");
     $(".triangle-red").css("top", h / 2.5 + "px");
     $("#tlb33").css("opacity", 1);
