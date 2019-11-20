@@ -271,12 +271,12 @@ function scrollElements() {
     $("#trr35")
       .css("top", 10 * th + "px")
       .css("left", 3 * tw + "px");
-    $("#catalog").css("opacity", 0);
+    $("#catalog").css("display", "none");
     $(".backgrounds").css("pointer-events", "none");
   } else if (scrollTopVal > 3000) {
     console.log(h);
     $(".backgrounds").css("pointer-events", "none");
-    $("#catalog").css("opacity", 1);
+    $("#catalog").css("display", "block");
     // $("#skills").css("z-index", 9999);
     $(".triangle-blue")
       // .css("left", 0 * tw + "px")
