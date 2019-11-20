@@ -88,11 +88,12 @@
     },
 
     _toggleZoomEvent: function(event) {
-      this.$el.turn("toggleZoom", {
-        pageX: event.pageX,
-        pageY: event.pageY,
-        animate: true
-      });
+      console.log("test");
+      // this.$el.turn("toggleZoom", {
+      //   pageX: event.pageX,
+      //   pageY: event.pageY,
+      //   animate: true
+      // });
     },
 
     _missingEvent: function(event, pages) {
