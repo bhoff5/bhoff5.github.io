@@ -36,7 +36,20 @@ function scrollElements() {
 
   $(".rightContainer").css("width", tw * 4 + "px");
 
-  if (scrollTopVal <= 900) {
+  if (scrollTopVal <= 700) {
+    $(".leftContainer").css("margin-left", 900 / 3 - 300 + tmargin + "px");
+    $(".rightContainer").css("margin-left", -(900 / 3) + 300 + tmargin + "px");
+    $(".leftContainer").css(
+      "transform",
+      // "translateX(" + (scrollTopVal / 3 - 300) + "px)"
+      "translateX(" + (700 / 3 - 300) + "px)"
+    );
+    $(".rightContainer").css(
+      "transform",
+      // "translateX(" + (scrollTopVal / 3 - 300) * -1 + "px)"
+      "translateX(" + (700 / 3 - 300) * -1 + "px)"
+    );
+  } else if (scrollTopVal > 700 && scrollTopVal <= 900) {
     $(".leftContainer").css("margin-left", 900 / 3 - 300 + tmargin + "px");
     $(".rightContainer").css("margin-left", -(900 / 3) + 300 + tmargin + "px");
     $(".leftContainer").css(
@@ -60,14 +73,23 @@ function scrollElements() {
     );
   }
 
-  if (scrollTopVal < 3000) {
-    $("#brian").css("opacity", (scrollTopVal - 200) / 2000);
-    $("#fullStack").css("opacity", (scrollTopVal - 500) / 2000);
-    $("#developer").css("opacity", (scrollTopVal - 500) / 2000);
-  } else if (scrollTopVal >= 3000) {
+  if (scrollTopVal < 2000) {
+    $("#brian").css("opacity", 1);
+    $("#fullStack").css("opacity", 1);
+    $("#developer").css("opacity", 1);
+  } else if (scrollTopVal >= 2000) {
     $("#brian").css("opacity", 0);
     $("#fullStack").css("opacity", 0);
     $("#developer").css("opacity", 0);
+  }
+
+  if (scrollTopVal < 1800) {
+    $("#body").css("background-color", "rgba(255, 254, 249, 1)");
+  } else if (scrollTopVal >= 1800) {
+    $("#body").css(
+      "background-color",
+      "rgba(255, 254, 249," + 1800 / scrollTopVal / 1 + ")"
+    );
   }
 
   $(".myName")
@@ -127,7 +149,7 @@ function scrollElements() {
       .css("left", 2.8 * tw + "px");
   }
 
-  if (scrollTopVal <= 3000) {
+  if (scrollTopVal <= 2000) {
     $(".triangle").css("border-width", th + "px " + tw + "px");
     $(".triangle-blue").css("opacity", 1);
     $(".triangle-red").css("opacity", 1);
@@ -271,14 +293,7 @@ function scrollElements() {
     $("#trr35")
       .css("top", 10 * th + "px")
       .css("left", 3 * tw + "px");
-    $("#catalog").css("display", "none");
-    $(".backgrounds").css("pointer-events", "none");
-  } else if (scrollTopVal > 3000) {
-    console.log(h);
-    $(".backgrounds").css("pointer-events", "none");
-    $("#catalog").css("display", "block");
-    $("#catalog").css("opacity", 1);
-
+  } else if (scrollTopVal > 2000) {
     // $("#skills").css("z-index", 9999);
     $(".triangle-blue")
       // .css("left", 0 * tw + "px")
@@ -297,6 +312,27 @@ function scrollElements() {
     $("#trr34").css("pointer-events", "bounding-box");
     $("#tlb33").css("pointer-events", "bounding-box");
   }
+
+  if (scrollTopVal <= 2000) {
+    $("#catalog").css("opacity", 0);
+    $("#catalog").css("display", "none");
+    $(".backgrounds").css("pointer-events", "none");
+  } else if (scrollTopVal > 2000) {
+    $(".backgrounds").css("pointer-events", "none");
+    $("#catalog").css("display", "block");
+    $("#catalog").css("opacity", 1);
+  }
+
+  let view = $("#flipbook").turn("view");
+
+  if (view.indexOf(0) > -1) {
+    $("#flipbook").turn("next");
+  }
+  $("#flipbook").bind("turning", function(event, page, view) {
+    if (page == 1) {
+      event.preventDefault();
+    }
+  });
 }
 function resizeElements() {
   var h = $(window).height();

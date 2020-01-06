@@ -29,6 +29,7 @@ li {
   opacity: 0;
   touch-action: none;
   /* display: none; */
+  transition: all 5s;
 }
 
 .myName {
@@ -36,8 +37,8 @@ li {
   position: absolute;
   font-family: "tex_gyre_scholaregular", serif;
   text-align: center;
-  transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
-  color: #fefba0c4;
+  /* transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1); */
+  color: #525252c4;
 }
 
 body {
@@ -45,6 +46,7 @@ body {
   height: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
+  /* transition: all 1s; */
 }
 
 .toTop {
@@ -234,8 +236,12 @@ thumb {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  background-color: black;
+}
+
 body {
-  background-color: #0f0f0f;
+  background-color: rgba(255, 254, 249, 0);
 }
 
 a {
@@ -300,7 +306,7 @@ h2 {
 
 .pageText {
   filter: grayscale();
-  font-size: 1.9vh;
+  font-size: 1.7vh;
   font-family: "tex_gyre_scholaregular", serif;
   padding: 13vh 9vh;
   height: 100%;
