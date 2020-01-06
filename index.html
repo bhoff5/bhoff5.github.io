@@ -35,13 +35,13 @@
     <!-- App CSS dependencies -->
     <link type="text/css" rel="stylesheet" href="stylesheets/main.css" />
   </head>
-  <body>
+  <body id="body">
     <div class="container">
       <div id="catalog" class="catalog-app">
         <div id="viewer">
           <!-- <div class="toTop">Back to Top</div> -->
           <div id="flipbook" class="ui-flipbook animation-on">
-            <div style="background-color:#0f0f0f;"></div>
+            <div style="background-color:white;"></div>
 
             <div>
               <div class="pageText">
@@ -241,7 +241,7 @@
             ></div>
             <div
               id="tlb23"
-              class="triangle-left-yellow triangle triangle-blue"
+              class="triangle-left-blue triangle triangle-blue"
             ></div>
             <div
               id="tlb25"
@@ -384,6 +384,12 @@
           duration: 1500
         }
       };
+
+      // $("#flipbook").bind("turning", function(event, page, view) {
+      //   if (page == 1) {
+      //     event.preventDefault();
+      //   }
+      // });
 
       // $(window).load(function(event) {
       //   $("#flipbook").addClass("animation-on");
