@@ -15,7 +15,11 @@
 
 li {
   padding: 0;
-  height: 6vh;
+  height: 4vh;
+}
+
+.gitLink {
+  text-align: center;
 }
 
 @font-face {
@@ -306,7 +310,7 @@ h2 {
 
 .pageText {
   filter: grayscale();
-  font-size: 1.7vh;
+  font-size: 1.4vh;
   font-family: "tex_gyre_scholaregular", serif;
   padding: 13vh 9vh;
   height: 100%;
