@@ -20,6 +20,8 @@ li {
 
 .gitLink {
   text-align: center;
+  font-size: 1.4vh;
+  font-family: "tex_gyre_scholaregular", serif;
 }
 
 @font-face {
