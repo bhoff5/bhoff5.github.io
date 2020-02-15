@@ -36,20 +36,20 @@ function scrollElements() {
 
   $(".rightContainer").css("width", tw * 4 + "px");
 
-  if (scrollTopVal <= 700) {
-    $(".leftContainer").css("margin-left", 900 / 3 - 300 + tmargin + "px");
-    $(".rightContainer").css("margin-left", -(900 / 3) + 300 + tmargin + "px");
-    $(".leftContainer").css(
-      "transform",
-      // "translateX(" + (scrollTopVal / 3 - 300) + "px)"
-      "translateX(" + (700 / 3 - 300) + "px)"
-    );
-    $(".rightContainer").css(
-      "transform",
-      // "translateX(" + (scrollTopVal / 3 - 300) * -1 + "px)"
-      "translateX(" + (700 / 3 - 300) * -1 + "px)"
-    );
-  } else if (scrollTopVal > 700 && scrollTopVal <= 900) {
+  // if (scrollTopVal <= 700) {
+  //   $(".leftContainer").css("margin-left", 900 / 3 - 300 + tmargin + "px");
+  //   $(".rightContainer").css("margin-left", -(900 / 3) + 300 + tmargin + "px");
+  //   $(".leftContainer").css(
+  //     "transform",
+  //     // "translateX(" + (scrollTopVal / 3 - 300) + "px)"
+  //     "translateX(" + (700 / 3 - 300) + "px)"
+  //   );
+  //   $(".rightContainer").css(
+  //     "transform",
+  //     // "translateX(" + (scrollTopVal / 3 - 300) * -1 + "px)"
+  //     "translateX(" + (700 / 3 - 300) * -1 + "px)"
+  //   );
+  if (scrollTopVal <= 900) {
     $(".leftContainer").css("margin-left", 900 / 3 - 300 + tmargin + "px");
     $(".rightContainer").css("margin-left", -(900 / 3) + 300 + tmargin + "px");
     $(".leftContainer").css(
@@ -381,4 +381,8 @@ $(document).ready(function() {
   $(window).on("touchend", function(ev) {
     scrollElements();
   });
+});
+
+$(document).ready(function() {
+  $("body,html").animate({ scrollTop: 156 }, 800);
 });
