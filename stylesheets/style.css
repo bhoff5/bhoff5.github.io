@@ -311,7 +311,7 @@ h2 {
 } */
 
 .pageText {
-  filter: grayscale(0.8);
+  filter: grayscale(0.5);
   font-size: 1.4vh;
   font-family: "tex_gyre_scholaregular", serif;
   padding: 13vh 9vh;
