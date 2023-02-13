@@ -1,6 +1,7 @@
 function scrollElements() {
   var h = $(window).height();
   var w = $(window).width();
+  var arrow = $(".ca3-scroll-down-arrow");
 
   var ratio = 1200 / 1050;
   // var margin_width = (w - height * ratio) / 2;
@@ -61,6 +62,7 @@ function scrollElements() {
       "translateX(" + (scrollTopVal / 3 - 300) * -1 + "px)"
     );
   } else if (scrollTopVal > 900) {
+    arrow.hide();
     $(".leftContainer").css("margin-left", 900 / 3 - 300 + tmargin + "px");
     $(".rightContainer").css("margin-left", -(900 / 3) + 300 + tmargin + "px");
     $(".leftContainer").css(
