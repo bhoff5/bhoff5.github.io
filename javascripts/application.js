@@ -1,7 +1,7 @@
 function scrollElements() {
   var h = $(window).height();
   var w = $(window).width();
-  var arrow = $(".ca3-scroll-down-arrow");
+  var label_brian = $("#brian");
 
   var ratio = 1200 / 1050;
   // var margin_width = (w - height * ratio) / 2;
@@ -76,11 +76,11 @@ function scrollElements() {
   }
 
   if (scrollTopVal < 2000) {
-    $("#brian").css("opacity", 1);
+    label_brian.css("opacity", 1);
     $("#fullStack").css("opacity", 1);
     $("#developer").css("opacity", 1);
   } else if (scrollTopVal >= 2000) {
-    $("#brian").css("opacity", 0);
+    label_brian.css("opacity", 0);
     $("#fullStack").css("opacity", 0);
     $("#developer").css("opacity", 0);
   }
@@ -98,7 +98,7 @@ function scrollElements() {
     .css("height", th + "px")
     .css("width", tw + "px");
 
-  $("#brian")
+  label_brian
     .css("top", 4.8 * th + "px")
     .css("left", 0.8 * tw + "px");
 
@@ -112,7 +112,7 @@ function scrollElements() {
 
   if (w <= 1000) {
     $(".myName").css("font-size", tw / 8 + "px");
-    $("#brian")
+    label_brian
       .css("top", 4.0 * th + "px")
       .css("left", 0.8 * tw + "px");
 
@@ -125,7 +125,7 @@ function scrollElements() {
       .css("left", 2.8 * tw + "px");
   } else if (w <= 2000) {
     $(".myName").css("font-size", tw / 9 + "px");
-    $("#brian")
+    label_brian
       .css("top", 4.8 * th + "px")
       .css("left", 0.8 * tw + "px");
 
@@ -138,7 +138,7 @@ function scrollElements() {
       .css("left", 2.8 * tw + "px");
   } else {
     $(".myName").css("font-size", tw / 11 + "px");
-    $("#brian")
+    label_brian
       .css("top", 4.8 * th + "px")
       .css("left", 0.8 * tw + "px");
 
@@ -323,6 +323,8 @@ function scrollElements() {
     $(".backgrounds").css("pointer-events", "none");
     $("#catalog").css("display", "block");
     $("#catalog").css("opacity", 1);
+    $(".ca3-scroll-down-arrow");
+
   }
 
   let view = $("#flipbook").turn("view");
