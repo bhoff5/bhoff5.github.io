@@ -62,7 +62,6 @@ function scrollElements() {
       "translateX(" + (scrollTopVal / 3 - 300) * -1 + "px)"
     );
   } else if (scrollTopVal > 900) {
-    arrow.hide();
     $(".leftContainer").css("margin-left", 900 / 3 - 300 + tmargin + "px");
     $(".rightContainer").css("margin-left", -(900 / 3) + 300 + tmargin + "px");
     $(".leftContainer").css(
@@ -319,12 +318,12 @@ function scrollElements() {
     $("#catalog").css("opacity", 0);
     $("#catalog").css("display", "none");
     $(".backgrounds").css("pointer-events", "none");
-    $(".ca3-scroll-down-arrow").show();
+    $(".ca3-scroll-down-arrow").height(200);
   } else if (scrollTopVal > 2000) {
     $(".backgrounds").css("pointer-events", "none");
     $("#catalog").css("display", "block");
     $("#catalog").css("opacity", 1);
-    $(".ca3-scroll-down-arrow").hide();
+    $(".ca3-scroll-down-arrow").height(50);
 
   }
 
