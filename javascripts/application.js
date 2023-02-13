@@ -2,6 +2,7 @@ function scrollElements() {
   var h = $(window).height();
   var w = $(window).width();
   var label_brian = $("#brian");
+  console.log("test");
 
   var ratio = 1200 / 1050;
   // var margin_width = (w - height * ratio) / 2;
