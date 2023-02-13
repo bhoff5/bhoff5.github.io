@@ -318,12 +318,13 @@ function scrollElements() {
     $("#catalog").css("opacity", 0);
     $("#catalog").css("display", "none");
     $(".backgrounds").css("pointer-events", "none");
-    $(".ca3-scroll-down-arrow").height(200);
+    $(".ca3-scroll-down-link").show()
   } else if (scrollTopVal > 2000) {
+    console.log(scrollTopVal);
     $(".backgrounds").css("pointer-events", "none");
     $("#catalog").css("display", "block");
     $("#catalog").css("opacity", 1);
-    $(".ca3-scroll-down-arrow").height(50);
+    $(".ca3-scroll-down-link").hide();
 
   }
 
