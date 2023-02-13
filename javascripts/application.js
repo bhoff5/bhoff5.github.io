@@ -319,11 +319,12 @@ function scrollElements() {
     $("#catalog").css("opacity", 0);
     $("#catalog").css("display", "none");
     $(".backgrounds").css("pointer-events", "none");
+    $(".ca3-scroll-down-arrow").show();
   } else if (scrollTopVal > 2000) {
     $(".backgrounds").css("pointer-events", "none");
     $("#catalog").css("display", "block");
     $("#catalog").css("opacity", 1);
-    $(".ca3-scroll-down-arrow");
+    $(".ca3-scroll-down-arrow").hide();
 
   }
 
