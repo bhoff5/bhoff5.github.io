@@ -400,7 +400,7 @@ $(document).ready(function() {
 
 $(function() {
   $('.ca3-scroll-down-link').on('click', function(e) {
-    console.log("scrolltop", $($(this).attr('href')).offset().top)
+    console.log("anchor test");
     e.preventDefault();
     $("body,html").animate({ scrollTop: 4000 }, 800);
   });
