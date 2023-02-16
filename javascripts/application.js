@@ -392,3 +392,10 @@ $(document).ready(function() {
 $(document).ready(function() {
   $("body,html").animate({ scrollTop: 156 }, 800);
 });
+
+$(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
