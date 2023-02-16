@@ -1,7 +1,11 @@
 function scrollElements() {
-  var h = $(window).height();
-  var w = $(window).width();
-  var label_brian = $("#brian");
+  let h = $(window).height();
+  let w = $(window).width();
+  let leftContainer = $(".leftContainer");
+  let rightContainer = $(".rightContainer");
+  let label_brian = $("#brian");
+  let label_fullstack = $("#fullStack");
+  let label_developer = $("#developer");
   console.log("test");
 
   var ratio = 1200 / 1050;
@@ -34,9 +38,9 @@ function scrollElements() {
   // var portrait_margin_width =
   //   (w - height * portrait_ratio * (1 + scrollTopVal / height)) / 2;
 
-  $(".leftContainer").css("width", tw * 4 + "px");
+  leftContainer.css("width", tw * 4 + "px");
 
-  $(".rightContainer").css("width", tw * 4 + "px");
+  rightContainer.css("width", tw * 4 + "px");
 
   // if (scrollTopVal <= 700) {
   //   $(".leftContainer").css("margin-left", 900 / 3 - 300 + tmargin + "px");
@@ -52,24 +56,24 @@ function scrollElements() {
   //     "translateX(" + (700 / 3 - 300) * -1 + "px)"
   //   );
   if (scrollTopVal <= 900) {
-    $(".leftContainer").css("margin-left", 900 / 3 - 300 + tmargin + "px");
-    $(".rightContainer").css("margin-left", -(900 / 3) + 300 + tmargin + "px");
-    $(".leftContainer").css(
+    leftContainer.css("margin-left", 900 / 3 - 300 + tmargin + "px");
+    rightContainer.css("margin-left", -(900 / 3) + 300 + tmargin + "px");
+    leftContainer.css(
       "transform",
       "translateX(" + (scrollTopVal / 3 - 300) + "px)"
     );
-    $(".rightContainer").css(
+    rightContainer.css(
       "transform",
       "translateX(" + (scrollTopVal / 3 - 300) * -1 + "px)"
     );
   } else if (scrollTopVal > 900) {
-    $(".leftContainer").css("margin-left", 900 / 3 - 300 + tmargin + "px");
-    $(".rightContainer").css("margin-left", -(900 / 3) + 300 + tmargin + "px");
-    $(".leftContainer").css(
+    leftContainer.css("margin-left", 900 / 3 - 300 + tmargin + "px");
+    rightContainer.css("margin-left", -(900 / 3) + 300 + tmargin + "px");
+    leftContainer.css(
       "transform",
       "translateX(" + (900 / 3 - 300) + "px)"
     );
-    $(".rightContainer").css(
+    rightContainer.css(
       "transform",
       "translateX(" + (900 / 3 - 300) * -1 + "px)"
     );
@@ -77,12 +81,12 @@ function scrollElements() {
 
   if (scrollTopVal < 2000) {
     label_brian.css("opacity", 1);
-    $("#fullStack").css("opacity", 1);
-    $("#developer").css("opacity", 1);
+    label_fullstack.css("opacity", 1);
+    label_developer.css("opacity", 1);
   } else if (scrollTopVal >= 2000) {
     label_brian.css("opacity", 0);
-    $("#fullStack").css("opacity", 0);
-    $("#developer").css("opacity", 0);
+    label_fullstack.css("opacity", 0);
+    label_developer.css("opacity", 0);
   }
 
   if (scrollTopVal < 1800) {
@@ -102,11 +106,11 @@ function scrollElements() {
     .css("top", 4.8 * th + "px")
     .css("left", 0.8 * tw + "px");
 
-  $("#fullStack")
+  label_fullstack
     .css("top", 9.3 * th + "px")
     .css("left", 2.5 * tw + "px");
 
-  $("#developer")
+  label_developer
     .css("top", 15.5 * th + "px")
     .css("left", 2.8 * tw + "px");
 
@@ -116,11 +120,11 @@ function scrollElements() {
       .css("top", 4.0 * th + "px")
       .css("left", 0.8 * tw + "px");
 
-    $("#fullStack")
+    label_fullstack
       .css("top", 9.0 * th + "px")
       .css("left", 2.8 * tw + "px");
 
-    $("#developer")
+    label_developer
       .css("top", 17 * th + "px")
       .css("left", 2.8 * tw + "px");
   } else if (w <= 2000) {
@@ -129,11 +133,11 @@ function scrollElements() {
       .css("top", 4.8 * th + "px")
       .css("left", 0.8 * tw + "px");
 
-    $("#fullStack")
+    label_fullstack
       .css("top", 9.3 * th + "px")
       .css("left", 2.5 * tw + "px");
 
-    $("#developer")
+    label_developer
       .css("top", 15.5 * th + "px")
       .css("left", 2.8 * tw + "px");
   } else {
@@ -142,11 +146,11 @@ function scrollElements() {
       .css("top", 4.8 * th + "px")
       .css("left", 0.8 * tw + "px");
 
-    $("#fullStack")
+    label_fullstack
       .css("top", 9.3 * th + "px")
       .css("left", 2.5 * tw + "px");
 
-    $("#developer")
+    label_developer
       .css("top", 15.5 * th + "px")
       .css("left", 2.8 * tw + "px");
   }
