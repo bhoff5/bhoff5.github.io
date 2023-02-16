@@ -395,12 +395,13 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $("body,html").animate({ scrollTop: 156 }, 800);
+  
 });
 
 $(function() {
   $('.ca3-scroll-down-link').on('click', function(e) {
     console.log("scrolltop", $($(this).attr('href')).offset().top)
     e.preventDefault();
-    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    $("body,html").animate({ scrollTop: 4000 }, 800);
   });
 });
