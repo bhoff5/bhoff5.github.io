@@ -350,7 +350,7 @@ function scrollElements() {
     }
   });
   $flipbook.bind("turning", function(event, page, view) {
-    if (page == 8) {
+    if (page == 10) {
       $("#trr34").css("opacity", 0);
     } else {
       $("#trr34").css("opacity", 1);
