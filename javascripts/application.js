@@ -6,6 +6,12 @@ function scrollElements() {
   let label_brian = $("#brian");
   let label_fullstack = $("#fullStack");
   let label_developer = $("#developer");
+  let $body = $("#body");
+  let $backgrounds = $(".backgrounds");
+  let $flipbook = $("#flipbook");
+  let $catalog = $("#catalog");
+  let $myName = $(".myName");
+  let anchor_arrow = $(".ca3-scroll-down-link")
   console.log("test");
 
   var ratio = 1200 / 1050;
@@ -17,11 +23,11 @@ function scrollElements() {
   if (w <= 1000) {
     th = h / 35;
     tw = w / 4;
-    $(".backgrounds").css("top", 4 * th + "px");
+    $backgrounds.css("top", 4 * th + "px");
   } else {
     th = h / 25;
     tw = w / 5;
-    $(".backgrounds").css("top", 0);
+    $backgrounds.css("top", 0);
   }
   var tmargin = (w - tw * 4) / 2;
   // if (w <= 1000) {
@@ -90,15 +96,15 @@ function scrollElements() {
   }
 
   if (scrollTopVal < 1800) {
-    $("#body").css("background-color", "rgba(255, 254, 249, 1)");
+    $body.css("background-color", "rgba(255, 254, 249, 1)");
   } else if (scrollTopVal >= 1800) {
-    $("#body").css(
+    $body.css(
       "background-color",
       "rgba(255, 254, 249," + 1800 / scrollTopVal / 1 + ")"
     );
   }
 
-  $(".myName")
+  $myName
     .css("height", th + "px")
     .css("width", tw + "px");
 
@@ -115,7 +121,7 @@ function scrollElements() {
     .css("left", 2.8 * tw + "px");
 
   if (w <= 1000) {
-    $(".myName").css("font-size", tw / 8 + "px");
+    $myName.css("font-size", tw / 8 + "px");
     label_brian
       .css("top", 4.0 * th + "px")
       .css("left", 0.8 * tw + "px");
@@ -128,7 +134,7 @@ function scrollElements() {
       .css("top", 17 * th + "px")
       .css("left", 2.8 * tw + "px");
   } else if (w <= 2000) {
-    $(".myName").css("font-size", tw / 9 + "px");
+    $myName.css("font-size", tw / 9 + "px");
     label_brian
       .css("top", 4.8 * th + "px")
       .css("left", 0.8 * tw + "px");
@@ -141,7 +147,7 @@ function scrollElements() {
       .css("top", 15.5 * th + "px")
       .css("left", 2.8 * tw + "px");
   } else {
-    $(".myName").css("font-size", tw / 11 + "px");
+    $myName.css("font-size", tw / 11 + "px");
     label_brian
       .css("top", 4.8 * th + "px")
       .css("left", 0.8 * tw + "px");
@@ -320,30 +326,30 @@ function scrollElements() {
   }
 
   if (scrollTopVal <= 2000) {
-    $("#catalog").css("opacity", 0);
-    $("#catalog").css("display", "none");
-    $(".backgrounds").css("pointer-events", "none");
-    $(".ca3-scroll-down-link").show()
+    $catalog.css("opacity", 0);
+    $catalog.css("display", "none");
+    $backgrounds.css("pointer-events", "none");
+    anchor_arrow.show()
   } else if (scrollTopVal > 2000) {
     console.log(scrollTopVal);
-    $(".backgrounds").css("pointer-events", "none");
-    $("#catalog").css("display", "block");
-    $("#catalog").css("opacity", 1);
-    $(".ca3-scroll-down-link").hide();
+    $backgrounds.css("pointer-events", "none");
+    $catalog.css("display", "block");
+    $catalog.css("opacity", 1);
+    anchor_arrow.hide();
 
   }
 
-  let view = $("#flipbook").turn("view");
+  let view = $flipbook.turn("view");
 
   if (view.indexOf(0) > -1) {
-    $("#flipbook").turn("next");
+    $flipbook.turn("next");
   }
-  $("#flipbook").bind("turning", function(event, page, view) {
+  $flipbook.bind("turning", function(event, page, view) {
     if (page == 1) {
       event.preventDefault();
     }
   });
-  $("#flipbook").bind("turning", function(event, page, view) {
+  $flipbook.bind("turning", function(event, page, view) {
     if (page == 8) {
       $("#trr34").css("opacity", 0);
     } else {
