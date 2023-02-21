@@ -310,8 +310,7 @@ padding-top: 50px;
 }
 
 .thumbnail {
-  
-
+  width: 100%;
 }
 
 /* .pageContent {
@@ -348,89 +347,6 @@ h3 {
 svg {
   margin-bottom: 1vh;
 }
-
-/* .downCenter {
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #2d2d2d;
-  font-size: 13px;
-  text-align: center;
-  padding-bottom: 36px;
-  letter-spacing: 0.03em;
-} */
-
-/* .arrow {
-  position: relative;
-  left: 50%;
-  margin-left: -9px;
-  margin-top: 15px;
-  height: 0;
-  width: 9px;
-  border-bottom: 2px solid #e7e7e7;
-  border-left: 2px solid transparent;
-  border-right: 2px solid transparent;
-
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-
-  -webkit-transform-origin: bottom left;
-  -moz-transform-origin: bottom left;
-  -ms-transform-origin: bottom left;
-  -o-transform-origin: bottom left;
-  transform-origin: bottom left;
-}
-
-.arrow:after {
-  position: absolute;
-  left: 11px;
-  content: "";
-  height: 0;
-  width: 9px;
-  border-bottom: 2px solid #e7e7e7;
-  border-left: 2px solid transparent;
-  border-right: 2px solid transparent;
-
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  -webkit-transform-origin: bottom left;
-  -moz-transform-origin: bottom left;
-  -ms-transform-origin: bottom left;
-  -o-transform-origin: bottom left;
-  transform-origin: bottom left;
-}
-
-.navigation {
-  -webkit-backface-visibility: hidden;
-  position: fixed;
-  top: 10px;
-  rleft: 10px;
-  height: 46px;
-  width: 100%;
-  overflow: hidden;
-  transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -moz-transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-} */
-
- @media screen and (max-width: 1000px) {
-  .pageText {
-   padding: 3vh 5vh;
-  }
-	 
-  .bio {
-   padding: 5vh 5vh;
-  }
-} 
 
 .ca3-scroll-down-link {
   cursor:pointer;
@@ -470,3 +386,16 @@ svg {
   50%  { opacity: 1;  }
   100% { transform:translate(0,20px); opacity: 0; }
 }
+
+ @media screen and (max-width: 1000px) {
+  .pageText {
+   	padding: 3vh 5vh;
+  }
+	 
+  .bio {
+   	padding: 5vh 5vh;
+  }
+	.thumbnail-link {
+		padding-top: 20px;
+	}
+} 
