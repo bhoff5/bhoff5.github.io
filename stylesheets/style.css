@@ -412,11 +412,11 @@ svg {
   -o-transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 } */
 
-/* @media screen and (max-width: 1000px) {
+ @media screen and (max-width: 1000px) {
   .pageText {
-    font-size: 2vh;
+   padding: 3vh 5vh;
   }
-} */
+} 
 
 .ca3-scroll-down-link {
   cursor:pointer;
