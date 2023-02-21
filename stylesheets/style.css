@@ -8,6 +8,10 @@
   -ms-touch-action: pan-y;
 }
 
+a {
+	display: block;
+}
+
 /* html {
   scroll-behavior: smooth;
   overflow: scroll;
@@ -300,9 +304,9 @@ h2 {
 
 .thumbnail {
   width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 50px;
 }
 
 /* .pageContent {
