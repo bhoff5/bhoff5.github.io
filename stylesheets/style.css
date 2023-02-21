@@ -304,9 +304,9 @@ h2 {
 
 .thumbnail-link {
 width: 80%;
-padding-left: 10%;
-padding-right: 10%;
-padding-top: 50px;
+margin-left: 10%;
+margin-right: 10%;
+margin-top: 50px;
 }
 
 .thumbnail {
@@ -396,6 +396,6 @@ svg {
    	padding: 5vh 5vh;
   }
 	.thumbnail-link {
-		padding-top: 20px;
+		margin-top: 20px;
 	}
 } 
