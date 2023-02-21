@@ -302,11 +302,16 @@ h2 {
   margin: 10px 0;
 }
 
+.thumnail-link {
+width: 80%;
+padding-left: 10%;
+padding-right: 10%;
+padding-top: 50px;
+}
+
 .thumbnail {
-  width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 50px;
+  
+
 }
 
 /* .pageContent {
