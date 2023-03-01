@@ -2095,7 +2095,7 @@ canvas {
   font-size: calc(15px + 0.5vw);
   font-weight: 600;
   color: #484848;
-  z-index: 9;
+  z-index: 99;
 }
 #page-header:not(.ph-center):not(.ph-bg-image) .ph-caption-subtitle {
   color: #484848;
