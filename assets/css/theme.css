@@ -9351,7 +9351,7 @@ body:not(.tt-boxed) .tt-footer-inner,
       rgba(255, 255, 255, 0.88),
       rgba(255, 255, 255, 0.88)
     ),
-    linear-gradient(180deg, #cef141 87.18%, #79d7ec 98.63%);
+    linear-gradient(180deg, #cef141 87.18%, #cef141 98.63%);
 }
 .tt-section-6 {
   background: linear-gradient(
