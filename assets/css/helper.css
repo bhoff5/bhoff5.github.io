@@ -21,7 +21,28 @@
 
 /* ------------------------------------------------------------- *
  * Various classes
-/* ------------------------------------------------------------- */
+ * ------------------------------------------------------------- */
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0.5rem;
+  z-index: 10000;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 0.5rem;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
 
 /* clear */
 .clear {
