@@ -8,17 +8,7 @@ Personal portfolio site for **Brian Hoff**, Shopify / Shopify Plus developer. Ho
 - **Portfolio** – Selected work (Graf Lantz, Feltory, Glob, bootcamp projects)
 - **Core skills** – Shopify Plus, Liquid, JavaScript, jQuery, React, HTML5, CSS3
 - **Additional skills** – SCSS, SEO, Tailwind, GSAP, and more
-- **Contact** – Résumé (web page) and email
-
-## Résumé
-
-The résumé is an **editable HTML page** so you can update it without a PDF editor.
-
-- **Edit:** Open `resume.html` in any editor and change the content (sections, jobs, skills, etc.).
-- **Styling:** Resume-specific styles live in `assets/css/resume.css` (screen and print).
-- **PDF when needed:** On the resume page, click **Save as PDF / Print** (or use your browser’s Print → Save as PDF). The toolbar is hidden when printing so the PDF looks clean.
-
-You can keep or remove the old `assets/Brian Hoff Resume - 2025.pdf` file; the site now links to `resume.html`.
+- **Contact** – Résumé download and email
 
 ## Tech
 
@@ -26,6 +16,8 @@ You can keep or remove the old `assets/Brian Hoff Resume - 2025.pdf` file; the s
 - [GSAP](https://greensock.com/gsap/) + ScrollTrigger for animations
 - [Smooth Scrollbar](https://github.com/idiotWu/smooth-scrollbar), [Swiper](https://swiperjs.com/), [Lightgallery](https://sachinchoolur.github.io/lightGallery)
 - Google Fonts (Poppins, Noto Serif JP, Roboto)
+- Scripts load with `defer` for better initial parse performance
+- Canonical URL, Open Graph, Twitter cards, and JSON-LD Person schema for SEO and sharing
 
 ## Run locally
 

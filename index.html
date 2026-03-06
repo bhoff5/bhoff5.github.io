@@ -17,12 +17,17 @@
 		<meta property="og:title" content="Brian Hoff - Portfolio">
 		<meta property="og:description" content="Shopify/Shopify Plus developer. Full-stack capabilities with custom themes, JavaScript, Liquid, and e-commerce development.">
 		<meta property="og:url" content="https://bhoff5.github.io/">
+		<meta property="og:image" content="https://bhoff5.github.io/assets/img/logo-light.png">
 		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:image" content="https://bhoff5.github.io/assets/img/logo-light.png">
 		<meta name="twitter:title" content="Brian Hoff - Portfolio">
 		<meta name="twitter:description" content="Shopify Developer portfolio - custom themes, Liquid, JavaScript, e-commerce.">
 
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://bhoff5.github.io/">
 
 		<!-- Favicon (http://www.favicon-generator.org/) -->
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -43,6 +48,20 @@
 		<!-- Template master CSS -->
 		<link rel="stylesheet" href="assets/css/helper.css">
 		<link rel="stylesheet" href="assets/css/theme.css">
+
+		<!-- Structured data (JSON-LD) -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Brian Hoff",
+			"url": "https://bhoff5.github.io",
+			"email": "BrianLHoff@gmail.com",
+			"jobTitle": "Shopify Developer",
+			"description": "Shopify/Shopify Plus developer. Full-stack capabilities with custom theme and section building, JavaScript, CSS, integrations, UI/UX, and e-commerce development.",
+			"sameAs": []
+		}
+		</script>
 
 	</head>
 
@@ -315,9 +334,9 @@
 													<h2 class="pli-title">Feltory</h2> 
 													<div class="pli-categories-wrap">
 														<div class="pli-category">Feltory was one of Graf Lantz's brands. I built the entire Feltory website from scratch, including building the custom Bundle Builder page.</div>
-<!-- 														<div class="tt-btn tt-btn-link">
-															<a href="https://www.feltory.com" target="_blank" data-hover="Launch Site">Launch Site</a>
-														</div> -->
+														<div class="tt-btn tt-btn-link">
+															<a href="https://www.feltory.com" target="_blank" rel="noopener noreferrer" data-hover="Launch Site">Launch Site</a>
+														</div>
 													</div> <!-- /.pli-categories-wrap -->
 												</div> <!-- /.pli-info -->
 											</div> <!-- /.pli-info-col -->
@@ -364,9 +383,9 @@
 													<h2 class="pli-title">Glob</h2> 
 													<div class="pli-categories-wrap">
 														<div class="pli-category">Glob was one of Graf Lantz's brands. I was responsible for updating and maintaining the Glob website, including building new features.</div>
-<!-- 														<div class="tt-btn tt-btn-link">
-															<a href="https://www.glob.land" target="_blank" data-hover="Launch Site">Launch Site</a>
-														</div> -->
+														<div class="tt-btn tt-btn-link">
+															<a href="https://www.glob.land" target="_blank" rel="noopener noreferrer" data-hover="Launch Site">Launch Site</a>
+														</div>
 													</div> <!-- /.pli-categories-wrap -->
 												</div> <!-- /.pli-info -->
 											</div> <!-- /.pli-info-col -->
@@ -722,9 +741,9 @@
 								==================== 
 								-->
 								<div class="tt-page-nav tt-pn-scroll">
-									<a href="resume.html" class="tt-pn-link anim-fadeinup">
+									<a href="assets/2026%20Resume.pdf" target="_blank" rel="noopener noreferrer" class="tt-pn-link anim-fadeinup">
 										<div class="tt-pn-title">Résumé</div>
-										<div class="tt-pn-hover-title">View résumé (print to save as PDF)</div>
+										<div class="tt-pn-hover-title">Download Résumé</div>
 									</a> <!-- /.tt-pn-link -->
 
 								</div>
@@ -805,27 +824,27 @@
 		===================== -->
 
 		<!-- Core JS -->
-		<script src="assets/vendor/jquery/jquery.min.js"></script> <!-- jquery JS (https://jquery.com) -->
+		<script src="assets/vendor/jquery/jquery.min.js" defer></script> <!-- jquery JS (https://jquery.com) -->
 
 		<!-- Libs and Plugins JS -->
-		<script src="assets/vendor/gsap/gsap.min.js"></script> <!-- GSAP JS (https://greensock.com/gsap/) -->
-		<script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> <!-- GSAP ScrollToPlugin JS (https://greensock.com/scrolltoplugin/) -->
-		<script src="assets/vendor/gsap/ScrollTrigger.min.js"></script> <!-- GSAP ScrollTrigger JS (https://greensock.com/scrolltrigger/) -->
+		<script src="assets/vendor/gsap/gsap.min.js" defer></script> <!-- GSAP JS (https://greensock.com/gsap/) -->
+		<script src="assets/vendor/gsap/ScrollToPlugin.min.js" defer></script> <!-- GSAP ScrollToPlugin JS (https://greensock.com/scrolltoplugin/) -->
+		<script src="assets/vendor/gsap/ScrollTrigger.min.js" defer></script> <!-- GSAP ScrollTrigger JS (https://greensock.com/scrolltrigger/) -->
 
-		<script src="assets/vendor/smooth-scrollbar.js"></script> <!-- Smooth Scrollbar JS (https://github.com/idiotWu/smooth-scrollbar/) -->
-		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> <!-- Swiper JS (https://swiperjs.com/) -->
-		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> <!-- imagesloaded JS (more info: https://imagesloaded.desandro.com/) -->
-		<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> <!-- Isotope JS (http://isotope.metafizzy.co) -->
-		<script src="assets/vendor/isotope/packery-mode.pkgd.min.js"></script> <!-- Isotope Packery Mode JS (https://isotope.metafizzy.co/layout-modes/packery.html) -->
-		<script src="assets/vendor/lightgallery/js/lightgallery-all.min.js"></script> <!-- lightGallery Plugins JS (http://sachinchoolur.github.io/lightGallery) -->
-		<script src="assets/vendor/jquery.mousewheel.min.js"></script> <!-- A jQuery plugin that adds cross browser mouse wheel support (https://github.com/jquery/jquery-mousewheel) -->
+		<script src="assets/vendor/smooth-scrollbar.js" defer></script> <!-- Smooth Scrollbar JS (https://github.com/idiotWu/smooth-scrollbar/) -->
+		<script src="assets/vendor/swiper/js/swiper-bundle.min.js" defer></script> <!-- Swiper JS (https://swiperjs.com/) -->
+		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js" defer></script> <!-- imagesloaded JS (more info: https://imagesloaded.desandro.com/) -->
+		<script src="assets/vendor/isotope/isotope.pkgd.min.js" defer></script> <!-- Isotope JS (http://isotope.metafizzy.co) -->
+		<script src="assets/vendor/isotope/packery-mode.pkgd.min.js" defer></script> <!-- Isotope Packery Mode JS (https://isotope.metafizzy.co/layout-modes/packery.html) -->
+		<script src="assets/vendor/lightgallery/js/lightgallery-all.min.js" defer></script> <!-- lightGallery Plugins JS (http://sachinchoolur.github.io/lightGallery) -->
+		<script src="assets/vendor/jquery.mousewheel.min.js" defer></script> <!-- A jQuery plugin that adds cross browser mouse wheel support (https://github.com/jquery/jquery-mousewheel) -->
 
 		<!-- Theme master JS -->
-		<script src="assets/js/theme.js"></script>
-		<script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
-		<script src="assets/js/morph.js"></script>
+		<script src="assets/js/theme.js" defer></script>
+		<script src="https://code.jquery.com/pep/0.4.3/pep.js" defer></script>
+		<script src="assets/js/morph.js" defer></script>
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script> -->
-		<script src="assets/js/waves.js"></script>
+		<script src="assets/js/waves.js" defer></script>
 	</body>
 
 </html>
