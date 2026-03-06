@@ -1,0 +1,258 @@
+/**
+ * Design tokens: color scheme, typography, and type scale.
+ * Load after theme.css to override defaults.
+ */
+
+:root {
+  /* ---- Color palette ---- */
+  --color-bg: #ffffff;
+  --color-text: #1e293b;
+  --color-text-muted: #475569;
+  --color-text-soft: #64748b;
+  --color-heading: #0f172a;
+  --color-accent: #0d9488;
+  --color-accent-hover: #0f766e;
+  --color-hero-title: #1e3a5f;
+  --color-section-label: #64748b;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-selection-bg: #0d9488;
+  --color-selection-text: #fff;
+
+  /* ---- Font families ---- */
+  --font-body: "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: "Poppins", sans-serif;
+  --font-display: "Norline", "Noto Serif JP", serif;
+
+  /* ---- Type scale (rem) ---- */
+  --text-xs: 0.8125rem;   /* 13px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1.0625rem; /* 17px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 2rem;       /* 32px */
+  --text-4xl: 2.5rem;     /* 40px */
+  --text-5xl: 3rem;       /* 48px */
+
+  /* ---- Line heights ---- */
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.7;
+}
+
+/* -------------------------------------------------------------
+   Global overrides
+   ------------------------------------------------------------- */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+}
+
+#page-content {
+  color: var(--color-text);
+}
+
+/* Selection */
+::selection {
+  color: var(--color-selection-text);
+  background: var(--color-selection-bg);
+}
+::-moz-selection {
+  color: var(--color-selection-text);
+  background: var(--color-selection-bg);
+}
+::-webkit-selection {
+  color: var(--color-selection-text);
+  background: var(--color-selection-bg);
+}
+
+/* -------------------------------------------------------------
+   Headings & section titles
+   ------------------------------------------------------------- */
+
+/* Hero: keep display font for impact */
+.ph-caption-title,
+h1 {
+  font-family: var(--font-display);
+  color: var(--color-heading);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.ph-caption-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* Hero ghost title (large faded text behind) */
+.ph-caption-title-ghost {
+  color: var(--color-heading);
+  opacity: 0.06;
+}
+
+/* Light hero background (ph-bg-image-light-on) */
+body.ph-bg-image-light-on .ph-caption-title {
+  color: var(--color-hero-title);
+}
+body.ph-bg-image-light-on .ph-caption-subtitle {
+  color: var(--color-text-muted);
+}
+
+/* Section headings (Summary, Portfolio, Skills, etc.) */
+.tt-heading .tt-heading-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-heading);
+  letter-spacing: -0.02em;
+}
+
+.tt-heading .tt-heading-subtitle.text-gray,
+.tt-heading .tt-heading-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-section-label);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* Stroke-style section titles (e.g. "Portfolio", "Skills") */
+.tt-heading.tt-heading-stroke .tt-heading-title.text-gray,
+.tt-heading.tt-heading-stroke .tt-heading-title {
+  color: var(--color-heading);
+  -webkit-text-stroke-color: var(--color-heading);
+}
+
+/* -------------------------------------------------------------
+   Body text & paragraphs
+   ------------------------------------------------------------- */
+
+.tt-section p,
+.text-xxlg.font-alter p {
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+}
+
+/* -------------------------------------------------------------
+   Portfolio list
+   ------------------------------------------------------------- */
+
+.pli-title,
+.pli-title a {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-heading);
+  letter-spacing: -0.01em;
+}
+
+.pli-category {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-normal);
+}
+.portfolio-list:not(.pli-info-overlay) .pli-category {
+  opacity: 0.85;
+}
+
+/* -------------------------------------------------------------
+   Page nav (Résumé, Contact)
+   ------------------------------------------------------------- */
+
+.tt-pn-link .tt-pn-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-xl);
+  color: var(--color-heading);
+}
+
+.tt-pn-link .tt-pn-hover-title {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.tt-pn-link:hover .tt-pn-title {
+  color: var(--color-accent);
+}
+
+/* -------------------------------------------------------------
+   Footer & links
+   ------------------------------------------------------------- */
+
+#tt-footer,
+#tt-footer a,
+.tt-copyright {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+#tt-footer a:hover,
+.footer-github-link:hover {
+  color: var(--color-accent);
+}
+
+/* Inline / paragraph links */
+p a {
+  color: var(--color-accent);
+  opacity: 1;
+}
+p a:hover,
+p a:focus {
+  color: var(--color-accent-hover);
+  opacity: 1;
+}
+
+/* -------------------------------------------------------------
+   Helper text color classes (used in sections)
+   ------------------------------------------------------------- */
+
+.text-gray {
+  color: var(--color-section-label) !important;
+}
+
+.text-dark,
+.text-dark-2,
+.text-dark-3 {
+  color: var(--color-text) !important;
+}
+
+.text-main,
+.text-primary {
+  color: var(--color-accent) !important;
+}
+a.text-primary:hover,
+a.text-primary:focus {
+  color: var(--color-accent-hover) !important;
+}
+
+/* -------------------------------------------------------------
+   Preloader / transition (subtle, not red)
+   ------------------------------------------------------------- */
+
+body.tt-transition .ptr-prel-content {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-soft);
+}
+
+/* Scroll-down circle & magic cursor (when visible)
+   ------------------------------------------------------------- */
+
+#ball .ball-view,
+#ball .ball-drag {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--color-heading);
+}
+
+/* Scrolling text (Additional Skills) */
+.tt-scrolling-text-inner.text-dark-3 {
+  color: var(--color-text-soft);
+}

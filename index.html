@@ -36,12 +36,11 @@
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 
-		<!-- Google fonts (https://www.google.com/fonts) -->
+		<!-- Google fonts – only weights in use for faster load -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> <!-- Body font -->
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet"> <!-- Secondary/Alter font -->
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
 		<!-- Libs and Plugins CSS -->
 		<link rel="stylesheet" href="assets/vendor/normalize/normalize.min.css"> <!-- Normalize CSS (https://necolas.github.io/normalize.css/) -->
 		<link rel="stylesheet" href="assets/vendor/fontawesome/css/fontawesome-all.min.css"> <!-- Font Icons CSS (https://fontawesome.com) Free version! -->
@@ -51,6 +50,8 @@
 		<!-- Template master CSS -->
 		<link rel="stylesheet" href="assets/css/helper.css">
 		<link rel="stylesheet" href="assets/css/theme.css">
+		<link rel="stylesheet" href="assets/css/design-tokens.css">
+		<link rel="stylesheet" href="assets/css/design-presets.css">
 
 		<!-- Structured data (JSON-LD) -->
 		<script type="application/ld+json">
@@ -819,6 +820,43 @@
 
 		</main>
 		<!-- End body inner -->
+
+		<!-- Design preset switcher (for testing themes) -->
+		<div id="preset-switcher" class="preset-switcher" aria-label="Design theme switcher">
+			<span class="preset-switcher-label">Theme</span>
+			<div class="preset-switcher-buttons">
+				<button type="button" class="preset-btn" data-theme="">Default</button>
+				<button type="button" class="preset-btn" data-theme="warm">Warm</button>
+				<button type="button" class="preset-btn" data-theme="forest">Forest</button>
+				<button type="button" class="preset-btn" data-theme="rose">Rose</button>
+				<button type="button" class="preset-btn" data-theme="minimal">Minimal</button>
+				<button type="button" class="preset-btn" data-theme="midnight">Midnight</button>
+			</div>
+		</div>
+		<script>
+			(function() {
+				var KEY = 'portfolio-theme';
+				var body = document.body;
+				var buttons = document.querySelectorAll('.preset-btn');
+				function setTheme(theme) {
+					body.setAttribute('data-theme', theme || '');
+					try { localStorage.setItem(KEY, theme || ''); } catch (e) {}
+					buttons.forEach(function(btn) {
+						btn.classList.toggle('active', (btn.getAttribute('data-theme') || '') === (theme || ''));
+					});
+				}
+				try {
+					var saved = localStorage.getItem(KEY);
+					if (saved !== null) setTheme(saved);
+				} catch (e) {}
+				buttons.forEach(function(btn) {
+					btn.addEventListener('click', function() { setTheme(btn.getAttribute('data-theme')); });
+				});
+				buttons.forEach(function(btn) {
+					btn.classList.toggle('active', (btn.getAttribute('data-theme') || '') === (body.getAttribute('data-theme') || ''));
+				});
+			})();
+		</script>
 
 
         
