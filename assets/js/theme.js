@@ -155,19 +155,56 @@
         }
       }
 
-      // Page header elements appear (elements with class "ph-appear")
-      if ($(".ph-appear").length) {
-        tl_transitOut.from(
-          ".ph-appear",
-          {
-            duration: 2,
-            y: 40,
-            autoAlpha: 0,
-            stagger: 0.3,
-            ease: Expo.easeOut,
-          },
-          1.5
-        );
+      // Page header hero: choreographed entrance (replaces single .ph-appear stagger)
+      if ($("#page-header .ph-caption").length) {
+        // Title: lift + slight scale
+        tl_transitOut.from(".ph-caption-title", {
+          duration: 1.3,
+          y: 56,
+          scale: 0.97,
+          autoAlpha: 0,
+          ease: "expo.out",
+          clearProps: "transform",
+        }, 1.45);
+        // Blob: scale up + fade in
+        tl_transitOut.from("#blob", {
+          duration: 1.2,
+          scale: 0.82,
+          autoAlpha: 0,
+          ease: "expo.out",
+          clearProps: "transform",
+        }, 1.7);
+        // Waves (ghost title): fade in
+        tl_transitOut.from(".ph-caption-title-ghost", {
+          duration: 1.1,
+          autoAlpha: 0,
+          ease: "expo.out",
+        }, 2.0);
+        // Subtitle: short lift + fade
+        tl_transitOut.from(".ph-caption-subtitle", {
+          duration: 1,
+          y: 28,
+          autoAlpha: 0,
+          ease: "expo.out",
+          clearProps: "transform",
+        }, 2.25);
+        // Scroll-down circle: last
+        tl_transitOut.from(".scroll-down-circle .sdc-inner", {
+          duration: 0.85,
+          y: 20,
+          autoAlpha: 0,
+          ease: "expo.out",
+          clearProps: "transform",
+        }, 2.55);
+      } else if ($(".ph-appear").length) {
+        // Fallback if structure differs
+        tl_transitOut.from(".ph-appear", {
+          duration: 2,
+          y: 40,
+          autoAlpha: 0,
+          stagger: 0.3,
+          ease: "expo.out",
+        }, 1.5);
       }
 
       // Page header elements appear (project info list)

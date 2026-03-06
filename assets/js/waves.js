@@ -163,6 +163,14 @@ new SineWaveGenerator({
       segmentLength: 20,
       strokeStyle: "rgba(255, 255, 255, 0.5)",
     },
+    {
+      timeModifier: 1.3,
+      lineWidth: 180,
+      amplitude: 120,
+      wavelength: 260,
+      segmentLength: 18,
+      strokeStyle: "rgba(255, 255, 255, 0.25)",
+    },
   ],
 
   initialize: function () {},
@@ -173,15 +181,19 @@ new SineWaveGenerator({
     gradient.addColorStop(0.5, "rgba(21, 118, 155, 1)");
     gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
 
+    var gradientSoft = this.ctx.createLinearGradient(0, 0, this.width, 0);
+    gradientSoft.addColorStop(0, "rgba(0, 0, 0, 0)");
+    gradientSoft.addColorStop(0.5, "rgba(21, 118, 155, 0.6)");
+    gradientSoft.addColorStop(1, "rgba(0, 0, 0, 0)");
+
     var index = -1;
     var length = this.waves.length;
-    while (++index < length) {
-      this.waves[index].strokeStyle = gradient;
-    }
+    this.waves[0].strokeStyle = gradient;
+    if (this.waves[1]) this.waves[1].strokeStyle = gradientSoft;
 
-    // Clean Up
     index = void 0;
     length = void 0;
     gradient = void 0;
+    gradientSoft = void 0;
   },
 });

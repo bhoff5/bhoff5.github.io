@@ -19,6 +19,8 @@ Personal portfolio site for **Brian Hoff**, Shopify / Shopify Plus developer. Ho
 - Scripts load with `defer` for better initial parse performance
 - Canonical URL, Open Graph, Twitter cards, and JSON-LD Person schema for SEO and sharing
 
+GitHub Pages will serve `404.html` automatically for unknown URLs.
+
 ## Run locally
 
 Open `index.html` in a browser or use a simple static server, e.g.:

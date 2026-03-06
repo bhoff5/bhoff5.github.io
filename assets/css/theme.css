@@ -2346,6 +2346,19 @@ a.ph-category:hover {
   }
 }
 
+/* Gentle bounce hint on scroll-down icon */
+.scroll-down-circle .sdc-icon {
+  animation: sdc-bounce 2.2s ease-in-out infinite;
+}
+@keyframes sdc-bounce {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(5px);
+  }
+}
+
 /* Made with love 
 ================== */
 .made-with-love {

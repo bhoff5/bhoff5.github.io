@@ -63,6 +63,23 @@ class Blob {
     // ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
+
+    // Subtle top-left highlight (radial gradient)
+    var r = radius * 1.1;
+    var grad = ctx.createRadialGradient(
+      center.x - r * 0.4,
+      center.y - r * 0.5,
+      0,
+      center.x - r * 0.4,
+      center.y - r * 0.5,
+      r * 0.8
+    );
+    grad.addColorStop(0, "rgba(255, 255, 255, 0.2)");
+    grad.addColorStop(0.6, "rgba(255, 255, 255, 0.02)");
+    grad.addColorStop(1, "rgba(0, 0, 0, 0)");
+    ctx.fillStyle = grad;
+    ctx.fill();
+
     ctx.strokeStyle = "#000000";
     // ctx.stroke();
 
@@ -86,7 +103,7 @@ class Blob {
     this._color = value;
   }
   get color() {
-    return this._color || "#21C9AB";
+    return this._color || "rgba(33, 201, 171, 0.85)";
   }
 
   set canvas(value) {
