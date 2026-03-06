@@ -51,7 +51,6 @@
 		<link rel="stylesheet" href="assets/css/helper.css">
 		<link rel="stylesheet" href="assets/css/theme.css">
 		<link rel="stylesheet" href="assets/css/design-tokens.css">
-		<link rel="stylesheet" href="assets/css/design-presets.css">
 
 		<!-- Structured data (JSON-LD) -->
 		<script type="application/ld+json">
@@ -820,43 +819,6 @@
 
 		</main>
 		<!-- End body inner -->
-
-		<!-- Design preset switcher (for testing themes) -->
-		<div id="preset-switcher" class="preset-switcher" aria-label="Design theme switcher">
-			<span class="preset-switcher-label">Theme</span>
-			<div class="preset-switcher-buttons">
-				<button type="button" class="preset-btn" data-theme="">Default</button>
-				<button type="button" class="preset-btn" data-theme="warm">Warm</button>
-				<button type="button" class="preset-btn" data-theme="forest">Forest</button>
-				<button type="button" class="preset-btn" data-theme="rose">Rose</button>
-				<button type="button" class="preset-btn" data-theme="minimal">Minimal</button>
-				<button type="button" class="preset-btn" data-theme="midnight">Midnight</button>
-			</div>
-		</div>
-		<script>
-			(function() {
-				var KEY = 'portfolio-theme';
-				var body = document.body;
-				var buttons = document.querySelectorAll('.preset-btn');
-				function setTheme(theme) {
-					body.setAttribute('data-theme', theme || '');
-					try { localStorage.setItem(KEY, theme || ''); } catch (e) {}
-					buttons.forEach(function(btn) {
-						btn.classList.toggle('active', (btn.getAttribute('data-theme') || '') === (theme || ''));
-					});
-				}
-				try {
-					var saved = localStorage.getItem(KEY);
-					if (saved !== null) setTheme(saved);
-				} catch (e) {}
-				buttons.forEach(function(btn) {
-					btn.addEventListener('click', function() { setTheme(btn.getAttribute('data-theme')); });
-				});
-				buttons.forEach(function(btn) {
-					btn.classList.toggle('active', (btn.getAttribute('data-theme') || '') === (body.getAttribute('data-theme') || ''));
-				});
-			})();
-		</script>
 
 
         
