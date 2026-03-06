@@ -79,8 +79,13 @@ body {
 h1 {
   font-family: var(--font-display);
   color: var(--color-heading);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+}
+
+/* Ensure hero title sits above the blob so it stays readable */
+#blob-caption-wrapper .ph-caption-title,
+#blob-caption-wrapper h1.ph-caption-title {
+  position: relative;
+  z-index: 100;
 }
 
 .ph-caption-subtitle {
@@ -88,7 +93,7 @@ h1 {
   font-size: var(--text-lg);
   font-weight: 500;
   color: var(--color-text-muted);
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
 }
 
 /* Hero ghost title (large faded text behind) */
@@ -110,7 +115,7 @@ body.ph-bg-image-light-on .ph-caption-subtitle {
   font-family: var(--font-heading);
   font-weight: 700;
   color: var(--color-heading);
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .tt-heading .tt-heading-subtitle.text-gray,
@@ -120,7 +125,7 @@ body.ph-bg-image-light-on .ph-caption-subtitle {
   font-weight: 600;
   color: var(--color-section-label);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
 }
 
 /* Stroke-style section titles (e.g. "Portfolio", "Skills") */
@@ -150,7 +155,6 @@ body.ph-bg-image-light-on .ph-caption-subtitle {
   font-family: var(--font-heading);
   font-weight: 600;
   color: var(--color-heading);
-  letter-spacing: -0.01em;
 }
 
 .pli-category {
