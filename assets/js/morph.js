@@ -27,6 +27,14 @@ class Blob {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    // Subtle breathing: gentle radial nudge so the blob feels alive
+    this._breathTime = (this._breathTime || 0) + 0.014;
+    for (let i = 0; i < points; i++) {
+      let pt = pointsArray[i];
+      let nudge = Math.sin(this._breathTime + pt.azimuth * 2) * 0.35;
+      pt.radialEffect = (pt.radialEffect || 0) + nudge;
+    }
+
     pointsArray[0].solveWith(pointsArray[points - 1], pointsArray[1]);
 
     let p0 = pointsArray[points - 1].position;
@@ -111,8 +119,8 @@ class Blob {
       value instanceof HTMLElement &&
       value.tagName.toLowerCase() === "canvas"
     ) {
-      this._canvas = canvas;
-      this.ctx = this._canvas.getContext("2d");
+      this._canvas = value;
+      this.ctx = value.getContext("2d");
     }
   }
   get canvas() {

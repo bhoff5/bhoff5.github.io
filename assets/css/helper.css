@@ -44,6 +44,24 @@
   outline-offset: 2px;
 }
 
+.footer-github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+/* Focus-visible for keyboard users (accessibility) */
+.scroll-down-circle:focus-visible,
+.tt-pn-link:focus-visible,
+#tt-footer .tt-btn-link a:focus-visible,
+.footer-github-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+.scroll-down-circle:focus-visible {
+  outline-offset: 6px;
+}
+
 /* clear */
 .clear {
   clear: both !important;

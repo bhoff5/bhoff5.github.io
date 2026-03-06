@@ -9259,8 +9259,8 @@ body:not(.tt-boxed) .tt-footer-inner,
 ============================ */
 @media (max-width: 1024px) {
   #tt-footer {
-    padding: 60px 0;
-		display:none;
+    padding: 40px 20px;
+    display: block;
   }
   .tt-footer-inner {
     display: flex;

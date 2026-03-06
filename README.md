@@ -18,8 +18,9 @@ Personal portfolio site for **Brian Hoff**, Shopify / Shopify Plus developer. Ho
 - Google Fonts (Poppins, Noto Serif JP, Roboto)
 - Scripts load with `defer` for better initial parse performance
 - Canonical URL, Open Graph, Twitter cards, and JSON-LD Person schema for SEO and sharing
+- Accessibility: skip link, focus-visible styles, `prefers-reduced-motion` (CSS and GSAP), descriptive alt text
 
-GitHub Pages will serve `404.html` automatically for unknown URLs.
+GitHub Pages will serve `404.html` automatically for unknown URLs. `sitemap.xml` and `robots.txt` are included for crawlers.
 
 ## Run locally
 

@@ -35,6 +35,14 @@
 (function ($) {
   "use strict";
 
+  // Respect prefers-reduced-motion: shorten all GSAP animations
+  var prefersReducedMotion =
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReducedMotion && typeof gsap !== "undefined") {
+    gsap.defaults({ duration: 0.02 });
+  }
+
   // ========================================
   // Detect browser and add class to </body>
   // ========================================
@@ -2288,10 +2296,80 @@
   // =========================================
 
   // ================================================================
-  // Portfolio list
+  // Portfolio list: staggered card entrance when section enters view
   // ================================================================
+  if ($(".portfolio-list-item").length) {
+    gsap.from(".portfolio-list-item", {
+      duration: 0.9,
+      autoAlpha: 0,
+      y: 36,
+      stagger: 0.1,
+      ease: "power2.out",
+      clearProps: "all",
+      scrollTrigger: {
+        trigger: ".portfolio-list",
+        start: "top 88%",
+        markers: false,
+      },
+    });
+  }
 
-  // Play video on hover
+  // Portfolio list item info elements scrolling effects
+  $(".pli-info").each(function () {
+    var $pliTitle = $(this).find(".pli-title");
+    var $pliCategory = $(this).find(".pli-categories-wrap");
+    var $pliCounter = $(this).find(".pli-counter");
+
+    let tl_plIInfo = gsap.timeline({
+      scrollTrigger: {
+        trigger: this,
+        start: "top bottom",
+        markers: false,
+      },
+    });
+
+    if ($($pliTitle).length) {
+      tl_plIInfo.from(
+        $pliTitle,
+        {
+          duration: 2.5,
+          autoAlpha: 0,
+          y: 80,
+          ease: Expo.easeOut,
+          clearProps: "all",
+        },
+        "+=0.5"
+      );
+    }
+    if ($($pliCategory).length) {
+      tl_plIInfo.from(
+        $pliCategory,
+        {
+          duration: 2.5,
+          autoAlpha: 0,
+          y: 60,
+          ease: Expo.easeOut,
+          clearProps: "all",
+        },
+        "-=2.2"
+      );
+    }
+    if ($($pliCounter).length) {
+      tl_plIInfo.from(
+        $pliCounter,
+        {
+          duration: 2.5,
+          autoAlpha: 0,
+          y: 40,
+          ease: Expo.easeOut,
+          clearProps: "all",
+        },
+        "-=2.2"
+      );
+    }
+  });
+
+  // Play video on hover (portfolio list)
   $(".pli-image-link")
     .on("mouseenter", function () {
       $(this)
@@ -2606,6 +2684,9 @@
     if ($(".ph-caption-title-ghost").length) {
       tlPhParallax.to(".ph-caption-title-ghost", { yPercent: 20 }, 0);
     }
+    if ($("#blob").length) {
+      tlPhParallax.to("#blob", { yPercent: 15, scale: 0.92, autoAlpha: 0.2 }, 0);
+    }
 
     // Page header image scrolling effect
     if ($(".ph-image").length) {
@@ -2800,62 +2881,6 @@
       });
     }
   }
-
-  // Portfolio list item info elements scrolling effects:
-  // =====================================================
-  $(".pli-info").each(function () {
-    var $pliTitle = $(this).find(".pli-title");
-    var $pliCategory = $(this).find(".pli-categories-wrap");
-    var $pliCounter = $(this).find(".pli-counter");
-
-    let tl_plIInfo = gsap.timeline({
-      scrollTrigger: {
-        trigger: this,
-        start: "top bottom",
-        markers: false,
-      },
-    });
-
-    if ($($pliTitle).length) {
-      tl_plIInfo.from(
-        $pliTitle,
-        {
-          duration: 2.5,
-          autoAlpha: 0,
-          y: 80,
-          ease: Expo.easeOut,
-          clearProps: "all",
-        },
-        "+=0.5"
-      );
-    }
-    if ($($pliCategory).length) {
-      tl_plIInfo.from(
-        $pliCategory,
-        {
-          duration: 2.5,
-          autoAlpha: 0,
-          y: 60,
-          ease: Expo.easeOut,
-          clearProps: "all",
-        },
-        "-=2.2"
-      );
-    }
-    if ($($pliCounter).length) {
-      tl_plIInfo.from(
-        $pliCounter,
-        {
-          duration: 2.5,
-          autoAlpha: 0,
-          y: 40,
-          ease: Expo.easeOut,
-          clearProps: "all",
-        },
-        "-=2.2"
-      );
-    }
-  });
 
   // Image parallax
   // ===============
