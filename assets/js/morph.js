@@ -18,11 +18,9 @@ class Blob {
   render() {
     let canvas = this.canvas;
     let ctx = this.ctx;
-    let position = this.position;
     let pointsArray = this.points;
-    let radius = this.radius;
     let points = this.numPoints;
-    let divisional = this.divisional;
+    let radius = this.radius;
     let center = this.center;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -55,10 +53,6 @@ class Blob {
       var xc = (p1.x + p2.x) / 2;
       var yc = (p1.y + p2.y) / 2;
       ctx.quadraticCurveTo(p1.x, p1.y, xc, yc);
-      // ctx.lineTo(p2.x, p2.y);
-
-      ctx.fillStyle = "#000000";
-      // ctx.fillRect(p1.x-2.5, p1.y-2.5, 5, 5);
 
       p1 = p2;
     }
@@ -66,9 +60,7 @@ class Blob {
     var xc = (p1.x + _p2.x) / 2;
     var yc = (p1.y + _p2.y) / 2;
     ctx.quadraticCurveTo(p1.x, p1.y, xc, yc);
-    // ctx.lineTo(_p2.x, _p2.y);
 
-    // ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
 
@@ -89,15 +81,6 @@ class Blob {
     ctx.fill();
 
     ctx.strokeStyle = "#000000";
-    // ctx.stroke();
-
-    /*
-    ctx.fillStyle = '#000000';
-    if(this.mousePos) {
-      let angle = Math.atan2(this.mousePos.y, this.mousePos.x) + Math.PI;
-      ctx.fillRect(center.x + Math.cos(angle) * this.radius, center.y + Math.sin(angle) * this.radius, 5, 5);
-    }
-*/
     requestAnimationFrame(this.render.bind(this));
   }
 

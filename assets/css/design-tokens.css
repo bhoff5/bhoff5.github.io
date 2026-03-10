@@ -12,7 +12,11 @@
   --color-heading: #0f172a;
   --color-accent: #0d9488;
   --color-accent-hover: #0f766e;
-  --color-hero-title: #1e3a5f;
+  /* Hero (matches section teal/mint/blue): title, subtitle, ghost */
+  --color-hero-title: #0f4c59;
+  --color-hero-subtitle: #1e6b7a;
+  --color-hero-ghost: #0f4c59;
+  /* Other options: deeper teal #1a5f6e / #2d7a8a | blue #0c3d5c / #1a5270 | softer #2d5a6b / #3d7a8c */
   --color-section-label: #64748b;
   --color-border: rgba(0, 0, 0, 0.08);
   --color-selection-bg: #0d9488;
@@ -78,27 +82,28 @@ body {
 .ph-caption-title,
 h1 {
   font-family: var(--font-display);
-  color: var(--color-heading);
+  color: var(--color-hero-title);
 }
 
-/* Ensure hero title sits above the blob so it stays readable */
+/* Ensure hero title sits above the blob; mix-blend-mode so overlap shows a different color */
 #blob-caption-wrapper .ph-caption-title,
 #blob-caption-wrapper h1.ph-caption-title {
   position: relative;
   z-index: 100;
+  mix-blend-mode: multiply;
 }
 
 .ph-caption-subtitle {
   font-family: var(--font-body);
   font-size: var(--text-lg);
   font-weight: 500;
-  color: var(--color-text-muted);
+  color: var(--color-hero-subtitle);
   letter-spacing: 0;
 }
 
 /* Hero ghost title (large faded text behind) */
 .ph-caption-title-ghost {
-  color: var(--color-heading);
+  color: var(--color-hero-ghost);
   opacity: 0.06;
 }
 
@@ -107,7 +112,7 @@ body.ph-bg-image-light-on .ph-caption-title {
   color: var(--color-hero-title);
 }
 body.ph-bg-image-light-on .ph-caption-subtitle {
-  color: var(--color-text-muted);
+  color: var(--color-hero-subtitle);
 }
 
 /* Section headings (Summary, Portfolio, Skills, etc.) */
@@ -170,20 +175,43 @@ body.ph-bg-image-light-on .ph-caption-subtitle {
    Page nav (Résumé, Contact)
    ------------------------------------------------------------- */
 
+/* Size link to one line so hover title doesn’t peek; clip overflow */
+.tt-pn-link {
+  --pn-line-height: 1.6;
+  font-size: clamp(42px, 6vw, 110px);
+  line-height: var(--pn-line-height);
+  height: calc(var(--pn-line-height) * 1em);
+  overflow: hidden;
+}
+
 .tt-pn-link .tt-pn-title {
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: var(--text-xl);
+  font-size: 1em;
   color: var(--color-heading);
 }
 
 .tt-pn-link .tt-pn-hover-title {
-  font-size: var(--text-sm);
+  font-size: 0.857em; /* ~36/42 */
   color: var(--color-text-muted);
+  top: 100%;
+  transform: translate3d(-50%, 0, 0);
+  transition: transform 0.6s cubic-bezier(0.51, 0.57, 0.17, 1), top 0.6s cubic-bezier(0.51, 0.57, 0.17, 1), color 0.4s ease;
 }
 
 .tt-pn-link:hover .tt-pn-title {
   color: var(--color-accent);
+}
+
+@media (min-width: 1025px) {
+  .tt-pn-link:hover .tt-pn-hover-title {
+    top: 0;
+    color: var(--color-accent);
+    transition-delay: 0.1s;
+  }
+  .tt-pn-link:hover .tt-pn-hover-title span::after {
+    background-color: var(--color-accent);
+  }
 }
 
 /* -------------------------------------------------------------
